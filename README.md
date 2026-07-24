@@ -60,7 +60,7 @@ Hãy mở terminal đã kích hoạt `(.venv)` và chạy lệnh nạp khóa tư
     ```
 *   **Nếu dùng Command Prompt (CMD):**
     ```cmd
-    set GEMINI_API_KEY=AIzaSyYourGeminiApiKeyHe
+    
     ```
 
 ### 🍎 Trên macOS / Linux:
