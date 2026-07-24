@@ -2,143 +2,139 @@
 
 > **Họ và tên:** Nguyễn Thu Huyền  
 > **Branch Git:** `NguyenThuHuyen`  
-> **Đơn vị:** Vin Smart Future (Vingroup)  
+> **Đơn vị:** Vin Smart Future (Vingroup) — Chuyên trách mảng **Vinpearl**  
 > **Môn học:** AI Product Lab  
 
 ---
 
-## 🔍 Phase 1 — SCAN: Bảng quét cơ hội vận hành Vingroup
+## 🔍 Phase 1 — SCAN: Bảng quét cơ hội vận hành Vinpearl
 
-Dựa trên **4 Lenses** (Lặp lại, Tốn thời gian, AI-upgrade, Stakeholder Pain), dưới đây là 5 bài toán vận hành thực tế tại các công ty thành viên thuộc Tập đoàn Vingroup:
+Dựa trên **4 Lenses** (Lặp lại, Tốn thời gian, AI-upgrade, Stakeholder Pain), dưới đây là 5 bài toán vận hành thực tế được phát hiện tại mảng Du lịch & Resort (**Vinpearl**):
 
-| # | Công ty thành viên (Subsidiary) | Thấu kính (Lens) | Tên bài toán / Bottleneck vận hành | Mô tả ngắn chi tiết bài toán |
-|---|----------------------------------|------------------|------------------------------------|--------------------------------------------------|
-| 1 | **VinFast & Xanh SM** | **AI-upgrade** & **Stakeholder Pain** | Trợ lý điều phối trạm sạc khẩn cấp & Cứu hộ pin di động cho xe điện | Tự động phân tích dung lượng pin khẩn cấp, tọa độ GPS thực tế, công suất trụ sạc khả dụng để đề xuất trạm sạc tối ưu hoặc kích hoạt xe sạc lưu động cứu hộ khi pin dưới 5%. |
-| 2 | **Vinhomes** | **Lặp lại (Repetitive)** | Phân loại & Điều hướng phản ánh cư dân qua App Vinhomes Resident | Phân loại tự động hàng ngàn yêu cầu/khiếu nại gửi về qua ứng dụng (mất nước, hỏng đèn, tiếng ồn, an ninh) và điều chuyển đúng Ban Quản lý từng phân khu/tòa nhà. |
-| 3 | **Vinmec** | **Tốn thời gian (Time-consuming)** | Tự động soạn thảo bản tóm tắt hồ sơ xuất viện (Discharge Summary Assistant) | Trích xuất thông tin lâm sàng, lịch sử dùng thuốc, kết quả xét nghiệm từ bệnh án điện tử (EHR) để tự động draft tóm tắt xuất viện bằng ngôn ngữ phổ thông cho bệnh nhân. |
-| 4 | **Vinpearl / VinWonders** | **Stakeholder Pain** | Phân tích cảm xúc & Tự động cảnh báo sự cố khẩn cấp từ đánh giá khách hàng | Quét bài đánh giá trên các nền tảng OTA (Booking.com, Agoda, Google Maps), phân loại phản hồi tiêu cực và gửi cảnh báo khẩn tới General Manager đối với sự cố vệ sinh/thái độ dịch vụ. |
-| 5 | **VinFast** | **Lặp lại (Repetitive)** | Đối chiếu dữ liệu sạc điện & Hóa đơn đối tác trạm sạc nhượng quyền | So khớp dữ liệu sạc điện telemetry hàng tuần từ hàng nghìn trụ sạc liên kết bên ngoài với hóa đơn tài chính gửi về hệ thống kế toán nhằm phát hiện chênh lệch chỉ số. |
-
----
-
-## 🃏 Phase 2 — QUICK-ASSESS: 3 Quick Problem Cards
-
-Chọn 3 bài toán tiềm năng nhất từ danh sách trên để phân tích sơ bộ:
+| # | Subsidiary | Lens | Tên bài toán / Bottleneck vận hành | Mô tả ngắn chi tiết bài toán |
+|---|------------|------|------------------------------------|--------------------------------------------------|
+| 1 | **Vinpearl** | **Time-consuming** | Tự động hóa xử lý email đặt phòng đoàn từ đại lý lữ hành (Group Booking Email Automation) | Trích xuất thông tin từ email và file đính kèm (Excel/PDF) của đối tác lữ hành B2B, tự động đối chiếu quỹ phòng và draft lệnh đặt phòng vào hệ thống PMS (Opera). |
+| 2 | **Vinpearl** | **Stakeholder Pain** | Phân tích review đa kênh & Cảnh báo khiếu nại khẩn cấp (Multi-channel Review Monitoring & Escalation) | Quét tự động đánh giá từ Booking.com, Agoda, Google Maps, TripAdvisor, phân tích cảm xúc và gửi cảnh báo khẩn cấp tới General Manager khi có phản hồi tiêu cực về vệ sinh/dịch vụ. |
+| 3 | **Vinpearl** | **AI-upgrade** | Trợ lý tư vấn lịch trình nghỉ dưỡng & Dịch vụ cá nhân hóa (Personalized Resort Concierge) | Chatbot/Trợ lý ảo hỗ trợ khách hàng tra cứu thông tin tour, lịch xe buggy, gợi ý dịch vụ spa/nhà hàng phù hợp với nhu cầu từng gia đình theo thời gian thực. |
+| 4 | **Vinpearl** | **Repetitive** | Phân loại & Đối chiếu dữ liệu hành lý / Vật phẩm thất lạc (Lost & Found Intelligent Matcher) | Phân loại tự động thông tin mô tả vật phẩm thất lạc do du khách khai báo (văn bản/hình ảnh) và đối chiếu với cơ sở dữ liệu đồ nhặt được của bộ phận Security/Housekeeping. |
+| 5 | **Vinpearl** | **Repetitive** | Đối chiếu tự động hóa đơn F&B / Dịch vụ phòng với Billing Folio trên PMS trước checkout | So khớp tự động các hóa đơn F&B, voucher ưu đãi và dịch vụ phòng do khách sử dụng tại các nhà hàng/quầy bar Vinpearl với billing folio trên PMS để phát hiện chênh lệch chỉ số trước khi khách làm thủ tục trả phòng. |
 
 ---
 
-### 📌 QUICK PROBLEM CARD #1: Điều phối trạm sạc khẩn cấp & Cứu hộ pin di động (VinFast / Xanh SM)
+## 🃏 Phase 2 — QUICK-ASSESS: 3 Quick Problem Cards (Vinpearl Edition)
+
+Chọn 3 bài toán tiềm năng nhất từ danh sách trên để phân tích chi tiết:
+
+---
+
+### 📌 QUICK PROBLEM CARD #1: Tự động hóa xử lý email đặt phòng đoàn (Vinpearl)
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
 │ QUICK PROBLEM CARD #1                                                                       │
 │                                                                                             │
-│ Bài toán: Hỗ trợ điều hướng trạm sạc và kích hoạt xe sạc cứu hộ lưu động khi xe báo pin yếu │
-│ Công ty thành viên: [x] VinFast  [x] Xanh SM  [ ] Vinhomes  [ ] Vinmec  [ ] Khác            │
+│ Bài toán: Trích xuất dữ liệu email đặt phòng đoàn B2B và draft lệnh booking trên PMS        │
+│ Công ty thành viên: [x] Vinpearl  [ ] VinWonders  [ ] Khác (Ghi rõ)________________________  │
 │                                                                                             │
-│ Ai đang đau (Actor)? Tài xế Xanh SM & Chủ xe điện VinFast gặp sự cố hết pin/pin khẩn cấp     │
+│ Ai đang đau (Actor)? Nhân viên phòng Kinh doanh (Sales Admin) & Bộ phận Đặt phòng (Reservation)│
 │                                                                                             │
-│ Workflow thủ công hiện tại (5 bước):                                                         │
-│   1. Xe báo pin yếu/khẩn cấp (< 10%)                                                       │
-│   ──> 2. Tài xế gọi Tổng đài hỗ trợ / Tự tìm trạm sạc trên app                              │
-│   ──> 3. Tổng đài viên kiểm tra vị trí xe & tra cứu bản đồ trạm sạc thủ công                 │
-│   ──> 4. Tổng đài viên xác nhận tình trạng trụ trống qua gọi điện cho quản lý trạm           │
-│   ──> 5. Soạn tin nhắn hướng dẫn tài xế tới trạm hoặc tạo lệnh điều xe cứu hộ sạc          │
+│ Workflow thủ công hiện tại (4 bước):                                                         │
+│   1. Đại lý lữ hành gửi email kèm file Excel/PDF danh sách khách đoàn (khách sạn, loại phòng) │
+│   ──> 2. Sales Admin đọc thủ công email và kiểm tra thông tin từng file đính kèm            │
+│   ──> 3. Tra cứu thủ công quỹ phòng trống trên phần mềm Quản lý khách sạn (PMS Opera)        │
+│   ──> 4. Nhập tay thông tin từng phòng/khách vào PMS để giữ chỗ và gửi email xác nhận báo giá  │
 │                                                                                             │
-│ Bước nào tốn thời gian/lỗi nhất? Bước 3 & 4 (Tra cứu thủ công & xác nhận trụ)               │
-│ ⏱ Thời gian xử lý: 10 - 15 phút/lượt                                                       │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 2 & 4 (Đọc hiểu dữ liệu không cấu trúc & nhập tay PMS) │
+│ ⏱ Thời gian xử lý: 30 - 60 phút/đoàn                                                        │
 │                                                                                             │
-│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 3, 4 & 5 (Tự động đọc GPS + SOC pin, gợi ý trạm    │
-│ phù hợp và draft tin nhắn/lệnh điều xe sạc di động).                                        │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 2 & 4 (LLM trích xuất dữ liệu structured từ      │
+│ email/Excel/PDF, gọi API check quỹ phòng và draft sẵn lệnh booking trên PMS).              │
 │                                                                                             │
 │ Đo thành công bằng gì (Metric có số)?                                                       │
-│   - Giảm thời gian xử lý yêu cầu hỗ trợ sạc từ 12 phút ──> dưới 2 phút/lượt                 │
-│   - Giảm 90% nguy cơ xe nằm đường chết pin do được điều xe sạc di động kịp thời khi pin < 5%  │
+│   - Giảm thời gian xử lý yêu cầu booking đoàn từ 45 phút ──> dưới 3 phút/đoàn                │
+│   - Tăng độ chính xác nhập liệu từ 85% ──> 99%, giảm thiểu sai sót loại phòng/ngày ở        │
 │                                                                                             │
-│ Quick Architecture: [ ] No AI  [ ] Rule  [ ] LLM  [x] Agent (LLM + Tools integration)       │
+│ Quick Architecture: [ ] No AI  [ ] Rule  [x] LLM Feature  [ ] Agent                         │
 └─────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 * **Lý giải kiến trúc (Quick Architecture):**  
-  Cần sử dụng **Agent** kết hợp LLM Feature. Hệ thống cần gọi Tool tra cứu vị trí GPS thực tế, API tình trạng trụ sạc trống theo thời gian thực (Real-time Occupancy API) và API kiểm tra tọa độ xe sạc di động gần nhất để ra quyết định điều hướng chính xác.
+  Sử dụng **LLM Feature** (Document/Email Parsing & Structured Output JSON). Định dạng file Excel/email của các đại lý lữ hành rất đa dạng, không cố định cấu trúc nên LLM tỏ ra vượt trội so với các công cụ đọc OCR/Rule-based truyền thống.
 
 ---
 
-### 📌 QUICK PROBLEM CARD #2: Phân loại & Điều hướng phản ánh cư dân (Vinhomes)
+### 📌 QUICK PROBLEM CARD #2: Phân tích review đa kênh & Cảnh báo khiếu nại khẩn cấp (Vinpearl)
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
 │ QUICK PROBLEM CARD #2                                                                       │
 │                                                                                             │
-│ Bài toán: Phân loại và phân luồng tự động ý kiến/khiếu nại của cư dân trên App Vinhomes     │
-│ Công ty thành viên: [ ] VinFast  [ ] Xanh SM  [x] Vinhomes  [ ] Vinmec  [ ] Khác            │
+│ Bài toán: Tự động gom review đa nền tảng, phân tích cảm xúc và cảnh báo sự cố nghiêm trọng  │
+│ Công ty thành viên: [x] Vinpearl  [ ] VinWonders  [ ] Khác (Ghi rõ)________________________  │
 │                                                                                             │
-│ Ai đang đau (Actor)? Nhân viên CSKH Ban quản lý tòa nhà Vinhomes & Cư dân khu đô thị         │
+│ Ai đang đau (Actor)? Trưởng bộ phận Quản lý Chất lượng (QA) & General Manager khu nghỉ dưỡng │
 │                                                                                             │
 │ Workflow thủ công hiện tại (4 bước):                                                         │
-│   1. Cư dân gửi phản ánh (văn bản/hình ảnh) trên App Vinhomes Resident                      │
-│   ──> 2. Điều phối viên CSKH trung tâm đọc thủ công từng ticket                              │
-│   ──> 3. Phân loại nhóm sự cố (Kỹ thuật/Vệ sinh/An ninh/Cảnh quan) và gán độ ưu tiên          │
-│   ──> 4. Chuyển ticket về Ban Quản lý từng tòa nhà/phân khu xử lý                            │
+│   1. Khách để lại đánh giá tiêu cực trên Booking.com, Agoda, Google Maps, TripAdvisor      │
+│   ──> 2. Nhân viên QA đăng nhập thủ công từng trang web 1 lần/ngày để đọc và chép vào Excel  │
+│   ──> 3. Phân loại thủ công nội dung phàn nàn (Vệ sinh, Thái độ phục vụ, Đồ ăn, Thiết bị)  │
+│   ──> 4. Soạn báo cáo gửi Email định kỳ cho General Manager để xử lý                        │
 │                                                                                             │
-│ Bước nào tốn thời gian/lỗi nhất? Bước 2 & 3 (Đọc hiểu văn bản mô tả tự do & phân loại)      │
-│ ⏱ Thời gian xử lý: 15 - 30 phút/ticket                                                      │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 2 & 3 (Đọc và phân loại thủ công, phản ứng trễ sự cố) │
+│ ⏱ Thời gian trễ xử lý: 24 - 48 giờ sau khi khách đăng review                                │
 │                                                                                             │
-│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 2 & 3 (Đọc hiểu văn bản tiếng Việt tự nhiên,     │
-│ trích xuất loại sự cố, gán tag ưu tiên và đề xuất Ban Quản lý tiếp nhận).                   │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 2 & 3 (Tự động cào/lấy API review, phân tích     │
+│ cảm xúc aspect-based, cảnh báo khẩn qua Telegram/Zalo cho Manager nếu có sự cố nghiêm trọng).│
 │                                                                                             │
 │ Đo thành công bằng gì (Metric có số)?                                                       │
-│   - Tăng tốc độ phân luồng ticket phản ánh từ 20 phút ──> dưới 30 giây/ticket               │
-│   - Đạt độ chính xác phân loại tự động > 92%, giảm 80% công sức phân loại thủ công           │
+│   - Giảm thời gian phát hiện và phản hồi khiếu nại khẩn từ 24 giờ ──> dưới 15 phút          │
+│   - Tăng tỷ lệ xử lý hài lòng sự cố tại chỗ trước khi khách checkout từ 30% ──> 85%         │
 │                                                                                             │
 │ Quick Architecture: [ ] No AI  [ ] Rule  [x] LLM Feature  [ ] Agent                         │
 └─────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 * **Lý giải kiến trúc (Quick Architecture):**  
-  Sử dụng **LLM Feature** (Text Classification & Structured Output). Ngôn ngữ cư dân mô tả rất tự do, nhiều từ địa phương hoặc viết tắt (ví dụ: *"tòa S2.01 thang máy kêu rè rè lắc mạnh"*, *"nước chảy yếu quá"*) nên LLM xử lý vượt trội so với Rule-based thông thường.
+  Sử dụng **LLM Feature** (Aspect-Based Sentiment Analysis & Classification). LLM có khả năng phân tích ngữ cảnh phức tạp trong các đoạn review dài, đa ngôn ngữ của du khách quốc tế và trích xuất đúng điểm phàn nàn chính.
 
 ---
 
-### 📌 QUICK PROBLEM CARD #3: Soạn thảo bản tóm tắt hồ sơ xuất viện (Vinmec)
+### 📌 QUICK PROBLEM CARD #3: Trợ lý tư vấn lịch trình nghỉ dưỡng & Dịch vụ cá nhân hóa (Vinpearl)
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
 │ QUICK PROBLEM CARD #3                                                                       │
 │                                                                                             │
-│ Bài toán: Trích xuất và soạn thảo tự động bản tóm tắt xuất viện dễ hiểu cho bệnh nhân        │
-│ Công ty thành viên: [ ] VinFast  [ ] Xanh SM  [ ] Vinhomes  [x] Vinmec  [ ] Khác            │
+│ Bài toán: Trợ lý AI Concierge tư vấn dịch vụ resort 24/7 và hỗ trợ đặt lịch spa/nhà hàng    │
+│ Công ty thành viên: [x] Vinpearl  [ ] VinWonders  [ ] Khác (Ghi rõ)________________________  │
 │                                                                                             │
-│ Ai đang đau (Actor)? Bác sĩ điều trị / Điều dưỡng Vinmec & Bệnh nhân xuất viện              │
+│ Ai đang đau (Actor)? Du khách lưu trú tại Vinpearl & Nhân viên Lễ tân / Concierge Desk      │
 │                                                                                             │
 │ Workflow thủ công hiện tại (4 bước):                                                         │
-│   1. Bác sĩ/Điều dưỡng tổng hợp dữ liệu từ bệnh án điện tử EHR (kết quả xét nghiệm, đơn thuốc)│
-│   ──> 2. Bác sĩ gõ thủ công bản tóm tắt quá trình điều trị và dặn dò sau xuất viện          │
-│   ──> 3. Điều dưỡng kiểm tra lại thông tin và in bản cứng                                   │
-│   ──> 4. Bác sĩ giải thích trực tiếp cho bệnh nhân khi làm thủ tục xuất viện                │
+│   1. Du khách gọi điện thoại hoặc đến quầy Lễ tân hỏi về thông tin dịch vụ, giờ buggy, menu │
+│   ──> 2. Nhân viên Lễ tân tra cứu sổ tay/hệ thống nội bộ để tư vấn giải đáp                 │
+│   ──> 3. Nhân viên ghi chú thủ công yêu cầu đặt chỗ dịch vụ (Spa, Nhà hàng, Buggy)          │
+│   ──> 4. Gọi điện thoại xác nhận lại với bộ phận liên quan để hoàn tất đặt dịch vụ          │
 │                                                                                             │
-│ Bước nào tốn thời gian/lỗi nhất? Bước 2 (Tổng hợp dữ liệu rải rác & gõ bản tóm tắt)         │
-│ ⏱ Thời gian xử lý: 25 - 40 phút/hồ sơ                                                       │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 2 & 3 (Xếp hàng tại Lễ tân giờ cao điểm, trễ phản hồi) │
+│ ⏱ Thời gian chờ đợi: 10 - 20 phút/lượt                                                      │
 │                                                                                             │
-│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 2 (Trích xuất thông tin chính từ EHR và soạn     │
-│ nháp bản tóm tắt xuất viện bằng thuật ngữ phổ thông, kèm dặn dò dùng thuốc).               │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 2, 3 & 4 (Trợ lý AI Concierge trên Vinpearl App/Zalo│
+│ trả lời tự động 24/7, gợi ý gói dịch vụ cá nhân hóa và draft lệnh đặt chỗ vào hệ thống).   │
 │                                                                                             │
 │ Đo thành công bằng gì (Metric có số)?                                                       │
-│   - Giảm thời gian soạn thảo bản tóm tắt xuất viện từ 30 phút ──> dưới 5 phút (Human-in-the-loop)│
-│   - Giảm 100% sai lệch thông tin liều dùng thuốc nhờ tự động đối chiếu dữ liệu EHR           │
+│   - Giảm 70% số lượng cuộc gọi/yêu cầu hỏi thông tin lặp đi lặp lại tới quầy Lễ tân        │
+│   - Giảm thời gian phản hồi tư vấn dịch vụ từ 15 phút ──> dưới 10 giây/câu hỏi              │
 │                                                                                             │
-│ Quick Architecture: [ ] No AI  [ ] Rule  [x] LLM Feature  [ ] Agent                         │
+│ Quick Architecture: [ ] No AI  [ ] Rule  [ ] LLM  [x] Agent (LLM + Resort Booking APIs)     │
 └─────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 * **Lý giải kiến trúc (Quick Architecture):**  
-  Sử dụng **LLM Feature** với quy trình kiểm duyệt **Human-in-the-Loop (HITL)** nghiêm ngặt. LLM giúp gom thông tin y khoa phức tạp và biên dịch thành ngôn ngữ dễ hiểu cho bệnh nhân. Bác sĩ bắt buộc phải ký duyệt bản nháp trước khi in cho bệnh nhân nhằm đảm bảo an toàn tuyệt đối.
+  Sử dụng **Agent** kết hợp tích hợp công cụ (Tools). Trợ lý AI cần gọi API tra cứu lịch trình resort real-time, API kiểm tra khung giờ trống của dịch vụ Spa/Nhà hàng và API tạo đơn đặt chỗ tự động.
 
 ---
 
 ## 🎯 Kết luận & Đề xuất bài toán cho thảo luận nhóm (Phase 3)
 
-Trong 3 bài toán trên, bài toán **"QUICK PROBLEM CARD #1: Điều phối trạm sạc khẩn cấp & Cứu hộ pin di động (VinFast / Xanh SM)"** là ứng viên sáng giá nhất để nhóm Vin Smart Future lựa chọn thực hiện Deep-Dive vì:
-1. Gắn liền trực tiếp với hoạt động cốt lõi của VinFast & Xanh SM (Hệ sinh thái xe điện).
-2. Tác động kinh doanh trực tiếp đến trải nghiệm tài xế/khách hàng và giảm tỷ lệ hủy chuyến do cố hết pin.
-3. Ranh giới an toàn (Operational Boundary) rõ ràng: Ranh giới pin < 5% không khuyến nghị trạm sạc xa > 5km mà phải kích hoạt điều xe cứu hộ pin di động.
+Trong 3 bài toán trên, bài toán **"QUICK PROBLEM CARD #1: Tự động hóa xử lý email đặt phòng đoàn (Vinpearl)"** hoặc **"QUICK PROBLEM CARD #2: Phân tích review đa kênh & Cảnh báo khiếu nại khẩn cấp (Vinpearl)"** là những ứng viên rất phù hợp để nhóm Vin Smart Future lựa chọn thực hiện Deep-Dive vì tính thực tế cao, dữ liệu rõ ràng và mang lại giá trị vận hành trực tiếp cho Vinpearl.
