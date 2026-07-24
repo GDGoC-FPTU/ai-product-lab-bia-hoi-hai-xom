@@ -229,4 +229,29 @@ Chọn **top 3 bài toán** từ danh sách trên và hoàn thiện **3 Quick Pr
 ---
 
 # 📝 Phase 6 — REFLECTION (Cá nhân)
-*Ghi nhận phản ánh của cá nhân bạn về việc phối hợp với AI trong buổi học hôm nay vào file `03-ai-log.md`.*
+
+**Họ và tên:** Hoàng Đức Anh  
+**Vai trò:** AI Product Engineer — Vin Smart Future  
+
+---
+
+### 1. 🤖 AI đã đóng vai trò Trợ lý đồng hành (Thought-partner) như thế nào?
+Trong suốt quá trình thực hiện bài lab, tôi đã sử dụng AI (ChatGPT / Gemini) như một đối tác phản biện và mở rộng góc nhìn:
+* **Brainstorm bài toán vận hành:** AI giúp gợi ý nhanh các pain-point thực tế trong hệ sinh thái Vingroup (VinFast, Xanh SM), đặc biệt là việc kết hợp tín hiệu camera DMS với telemetry thời gian thực cho nền tảng *Driver Intelligence Platform*.
+* **Chuẩn hóa các thẻ bài toán (Quick Cards):** AI hỗ trợ cấu trúc hóa workflow thủ công thành các bước tuần tự và đề xuất các chỉ số đo lường (Metrics) có con số cụ thể (giảm từ 45 phút xuống dưới 5 giây).
+* **Thiết lập ranh giới an toàn (Operational Boundaries):** Trợ giúp định nghĩa các quy tắc nghiêm ngặt để AI không vượt quyền trong các tác vụ liên quan đến an toàn giao thông.
+
+---
+
+### 2. ⚠️ AI đã đưa ra câu trả lời sai lệch (Hallucination) hoặc không hợp lý ở điểm nào?
+* **Lạm dụng LLM cho các tác vụ thời gian thực:** Ban đầu AI đề xuất dùng trực tiếp LLM để đọc video stream DMS ở tốc độ 30 FPS theo thời gian thực. Điều này không khả thi vì độ trễ (latency) của LLM quá cao và chi phí API cực kỳ đắt đỏ.
+* **Đề xuất giải pháp quá phức tạp:** AI có xu hướng gợi ý các mô hình AI phức tạp cho cả những bước tra cứu thông tin tĩnh mà thực chất chỉ cần mã hóa bằng thuật toán Rule-based hoặc truy vấn CSDL thông thường.
+
+---
+
+### 3. 🛠️ Tôi đã điều chỉnh Prompt & Kiến trúc ra sao để giải quyết?
+* **Tách bạch kiến trúc Hybrid (Rule + LLM):** 
+  * Các cảnh báo khẩn cấp thời gian thực (buồn ngủ, xao nhãng) được đẩy về mô hình Edge AI / Rule-based xử lý ngay lập tức trên thiết bị xe.
+  * LLM chỉ được phân công xử lý các tác vụ ngôn ngữ và tổng hợp báo cáo sau chuyến đi (*Automated Post-trip Driver Coaching Report*).
+* **Bổ sung ranh giới an toàn cấm (Hard Boundaries):** Thêm chỉ thị nghiêm ngặt trong System Prompt: *"AI chỉ đóng vai trò phân tích, hỗ trợ ra quyết định và sinh báo cáo; TUYỆT ĐỐI KHÔNG trực tiếp can thiệp vào hệ thống phanh hoặc điều khiển xe điện."*
+
