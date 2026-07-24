@@ -1,7 +1,13 @@
 # Deep-Dive Report — Xanh SM Emergency EV Charging Dispatcher
 
 **Nhóm:** Bia Hơi Hai Xóm  
-**Thành viên:** Mỹ Anh — MSSV: chưa cung cấp
+**Thành viên:** 
+1. Lương Quốc Khánh (MSSV: 2A202601713 - Group Lead)
+2. Cao Nhật Minh (MSSV: 2A202601721)
+3. Dương Văn Vũ (MSSV: 2A202601663)
+4. Trần Nguyễn Mỹ Anh (MSSV: 2A202601019)
+5. Nguyễn Thu Huyền (MSSV: 2A202601027)
+6. Hoàng Đức Anh (MSSV: 2A202601223)
 
 ## Quyết định lựa chọn
 
